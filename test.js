@@ -34,7 +34,7 @@ describe('property-path', function() {
         assert.equal('Hello', propPath.get(testObj, 'c/d/e', '/'));
     });
 
-    it('get should return undefined for invalid pathes', function() {
+    it('get should return undefined for invalid paths', function() {
         assert.equal(undefined, propPath.get(testObj, 'c/d/e/x', '/'));
         assert.equal(undefined, propPath.get(testObj, '////////x', '/'));
         assert.equal(undefined, propPath.get(testObj, 'xxx', '/'));

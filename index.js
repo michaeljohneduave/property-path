@@ -99,7 +99,7 @@ function get(obj, path, sep) {
     var currVal = obj;
     for (var i=0; i<properties.length; i++) {
         var currPropertyName = properties[i];
-        if (!currVal.hasOwnProperty(currPropertyName)) {
+        if (_.isNull(currVal) || _.isUndefined(currVal) || !currVal.hasOwnProperty(currPropertyName)) {
             return undefined;
         }
         currVal = currVal[currPropertyName];
